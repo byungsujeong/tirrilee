@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link href="{% static 'css/login.css' %}" rel='stylesheet' />
+<script src="{% static 'js/login.js' %}"></script>
+<script>
+    <!-- 로그인 요청 시 id/pw일치 여부에 따라 alert메시지 발생 -->
+    var flag = '{{flag}}'
+    if(flag == '1'){
+        alert('존재하지 않은 아이디 입니다.')
+    }else if(flag == '2'){
+        alert('잘못 된 비밀번호 입니다.')
+    }
+</script>
+{% endblock %}
+{% block content %}
+<section class="login_bg">
+    <div class="login_text">로그인</div>
+    <div class="tag_block">
+    <form action="signin" method="post">
+        {% csrf_token %}
+        <div class="block_text">아이디</div>
+        <div class="block_tag"><input type="text" id="member_id" name="member_id" placeholder="아이디를 입력해주세요."></div>
+        <div class="block_label"><label id="idCheck"></label></div>
+        <div class="block_text">비밀번호</div>
+        <div class="block_tag"><input type="password" id="member_pw" name="member_pw" placeholder="비밀번호를 입력해주세요."></div>
+        <div class="block_label"><label id="pwCheck"></label></div>
+        <div class="block_btn"><input type="submit" id="login" value="로그인"></div>
+    </form>
+    <div class="block_btn"><input type="button" id="signup" value="회원가입"></div>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,172 @@
+/* login.css */
+
+@charset "UTF-8";
+.login_bg {
+  position: relative;
+  width: 600px;
+  height: 557px;
+  background-color: #ffffff;
+  top: 60px;
+  left: 400px;
+}
+
+input[type=text] {
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    outline: none;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+input[type=password] {
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    outline: none;
+    outline-color: #dbdbdb;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+input[type=submit] {
+  border: none;
+  background: none;
+  width: auto;
+  height: 24px;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+input[type=button] {
+  border: none;
+  background: none;
+  width: auto;
+  height: 24px;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #43e39f;
+  margin-top: 16px;
+}
+
+.login_text {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 29px;
+    font-family: NotoSansCJKkr;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    top: 24px;
+    left: 273px;
+}
+
+.tag_block {
+    margin: 0;
+    position: relative;
+    width: 460px;
+    left: 70px;
+    top: 93px;
+}
+
+.block_text {
+    width: auto;
+    height: 20px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.block_tag {
+    width: 480px;
+    margin-bottom: 25px;
+}
+
+.block_label {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#login {
+  margin:0;
+  width: 100%;
+  height: 56px;
+  background-color: #43e39f;
+  text-align: center;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+#signup {
+  margin:0;
+  width: 100%;
+  height: 56px;
+  border: solid 1px #43e39f;
+  text-align: center;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #43e39f;
+}
+
+.block_btn {
+  margin-bottom: 10px;
+}

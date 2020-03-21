@@ -1,0 +1,174 @@
+/* basic.css */
+
+@charset "UTF-8";
+
+div {
+    margin: 0;
+}
+
+body {
+  margin: 0;
+  width: 1400px;
+  height: 2104px;
+  background-color: #ffffff;
+}
+.header{
+    height: 3.8%;
+    width: 100%;
+}
+
+.logo_location-div{
+    display: inline-block;
+    width: 262px;
+    height: 80px;
+
+    text-align: center;
+}
+
+.item_location-div{
+    display: inline-block;
+    width: 1030px;
+    height: 80px;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.copyright_location-div{
+    display: inline-block;
+    width: 700px;
+    height: 100px;
+    text-align: left;
+
+}
+
+.logo{
+  position: relative;
+  width: 62px;
+  height: 34px;
+  font-family: NotoSansCJKkr;
+  font-size: 23px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.87;
+  letter-spacing: -0.69px;
+  text-align: center;
+  color: #43e39f;
+  margin: 0;
+  top: 23px;
+}
+
+.item {
+    position: relative;
+    margin-left: 70px;
+    top: 25px;
+}
+
+.header_item {
+  width: 50px;
+  height: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: -0.42px;
+  text-align: center;
+  color: #767676;
+}
+
+.header_selected {
+  width: 92px;
+  height: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.79;
+  letter-spacing: -0.42px;
+  text-align: center;
+  color: #43e39f;
+}
+
+.ad {
+  width: 1400px;
+  height: 300px;
+  opacity: 0.7;
+  background-color: #181f34;
+  margin: 0;
+}
+
+.ad_title {
+  position: relative;
+  width: auto;
+  height: 59px;
+  font-family: NotoSansCJKkr;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.95;
+  letter-spacing: -1.2px;
+  text-align: center;
+  color: #ffffff;
+  top: 91px;
+}
+
+.ad_title .text-style-1 {
+  font-weight: bold
+}
+
+.ad_content {
+  position: relative;
+  width: auto;
+  height: 56px;
+  font-family: NanumPen;
+  font-size: 49px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -1.47px;
+  text-align: center;
+  color: #43e39f;
+  top: 106px;
+}
+
+.ad_content .text-style-1 {
+  color: #ffffff;
+}
+
+
+.content {
+  width: 1400px;
+  height: 1339px;
+  background-color: #f9f9f9;;
+}
+
+.footer {
+    height: 18.3%;
+    width: 100%;
+}
+
+.copyright {
+  position: relative;
+  top: 50px;
+  width: 463px;
+  height: 27px;
+  font-family: NotoSansCJKkr;
+  font-size: 9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.89;
+  letter-spacing: normal;
+  text-align: left;
+  color: #767676;
+
+}
+
+a {
+    text-decoration: none;
+}

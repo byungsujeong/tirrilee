@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link href="{% static 'css/mypage.css' %}" rel='stylesheet' />
+<script src="{% static 'js/mypage.js' %}"></script>
+<script src="{% static 'js/type_img.js' %}"></script>
+<script>
+<!-- select 박스 이메일 option 선택 함수 -->
+$(function(){
+    select_domain('{{member_email2}}');
+})
+function select_domain(request){
+    var option_domain = document.getElementById("member_email2");
+    for(i=0; i<option_domain.length; i++) {
+        if(option_domain.options[i].value == request) {
+            option_domain.options[i].selected = true;
+            break;
+        }else if(i==option_domain.length-1){
+            option_domain.options[i].selected = true;
+            $("#etc").html('<input type="text" id="member_email3" value="{{member_email2}}">');
+        }
+    }
+}
+</script>
+{% endblock %}
+{% block content %}
+<section class="mypage_bg">
+    <div class="signup_text">마이페이지</div>
+
+    <div class="tag_block">
+        <div class="type_text">가입유형을 선택해주세요.</div>
+        <div class="block_label"><label id="typeCheck"></label></div>
+        <div class="filter">
+            {% if dto.member_type == 'book' %}
+            <div class="radio_text_checked">
+                <div class="radio_btn_checked">
+                    <label><input type="radio" name="member_type" value="book" checked>
+                    <span id="book"><img src="{% static 'img/book_checked.png'%}" srcset="{% static 'img/book_checked@2x.png'%} 2x, {% static 'img/book_checked@3x.png'%} 3x" class="book">
+                    </span></label>
+                </div>
+                <div>스토리 작가</div>
+            </div>
+            <div class="radio_text">
+                <div class="radio_btn">
+                    <label><input type="radio" name="member_type" value="graphic">
+                    <span id="graphic"><img src="{% static 'img/graphic-tablet.png'%}" srcset="{% static 'img/graphic-tablet@2x.png'%} 2x, {% static 'img/graphic-tablet@3x.png'%} 3x" class="graphic-tablet">
+                    </span></label>
+                </div>
+                <div>그림 작가</div>
+            </div>
+            {% else %}
+            <div class="radio_text">
+                <div class="radio_btn">
+                    <label><input type="radio" name="member_type" value="book">
+                    <span id="book"><img src="{% static 'img/book.png'%}" srcset="{% static 'img/book@2x.png'%} 2x, {% static 'img/book@3x.png'%} 3x" class="book">
+                    </span></label>
+                </div>
+                <div>스토리 작가</div>
+            </div>
+            <div class="radio_text_checked">
+                <div class="radio_btn_checked">
+                    <label><input type="radio" name="member_type" value="graphic" checked>
+                    <span id="graphic"><img src="{% static 'img/graphic_checked.png'%}" srcset="{% static 'img/graphic_checked@2x.png'%} 2x, {% static 'img/graphic_checked@3x.png'%} 3x" class="graphic-tablet">
+                    </span></label>
+                </div>
+                <div>그림 작가</div>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="block_text">아이디</div>
+        <div class="block_tag"><input type="text" id="member_id" value="{{dto.member_id}}" readonly></div>
+        <div class="block_label"><label id="idCheck"></label></div>
+        <div class="block_text">비밀번호</div>
+        <div class="block_tag"><input type="password" id="member_pw" placeholder="비밀번호를 입력해주세요."></div>
+        <div class="block_label"><label id="pwCheck"></label></div>
+        <div class="block_text">이름</div>
+        <div class="block_tag"><input type="text" id="member_name" value="{{dto.member_name}}"></div>
+        <div class="block_label"><label id="nameCheck"></label></div>
+        <div class="block_text">이메일</div>
+        <div class="block_tag">
+            <input type="text" id="member_email1" value="{{member_email1}}">@
+            <select name="member_email2" id="member_email2">
+                <option value="naver.com">네이버</option>
+                <option value="hanmail.net">다음</option>
+                <option value="gmail.com">구글</option>
+                <option value="etc">기타</option>
+            </select>
+        </div>
+        <div id="etc"></div>
+        <div class="block_label"><label id="emailCheck"></label></div>
+        <div class="block_btn"><input type="button" id="update" value="정보수정"></div>
+    </div>
+</section>
+{% endblock %}

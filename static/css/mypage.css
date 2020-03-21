@@ -1,0 +1,284 @@
+/* mypage.css */
+
+@charset "UTF-8";
+.mypage_bg {
+  position: relative;
+  width: 600px;
+  height: 1035px;
+  background-color: #ffffff;
+  top: 60px;
+  left: 400px;
+}
+
+.signup_text {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 36px;
+    font-family: NotoSansCJKkr;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    top: 19px;
+    left: 256px;
+}
+
+.tag_block {
+    margin: 0;
+    position: relative;
+    width: 460px;
+    left: 70px;
+    top: 90px;
+}
+
+.type_text {
+  width: auto;
+  height: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.filter {
+    text-align: center;
+    margin: 50px;
+}
+
+.radio_btn {
+    margin:5px;
+    width: 131px;
+    height: 131px;
+    border: solid 2px #e6e6e6;
+    border-radius:100px;
+    background-color: #ffffff;
+    overflow:auto;
+    text-align: center;
+}
+
+.radio_btn_checked {
+    margin:5px;
+    width: 131px;
+    height: 131px;
+    box-shadow: 1px 1px 10px 0 rgba(67, 227, 159, 0.28);
+    border-radius:100px;
+    background-color: #ffffff;
+    overflow:auto;
+    text-align: center;
+}
+
+.radio_text{
+    display: inline-block;
+    margin:10px;
+    overflow:auto;
+    text-align: center;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #a0a0a0;
+}
+.radio_text_checked{
+    display: inline-block;
+    margin:10px;
+    overflow:auto;
+    text-align: center;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.book {
+  width: 68px;
+  height: 53.8px;
+  object-fit: contain;
+  margin-top: 31.3px;
+}
+
+.graphic-tablet {
+  width: 60.7px;
+  height: 60.7px;
+  object-fit: contain;
+  margin-top: 31.3px;
+}
+
+.block_label {
+    height: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.block_text {
+    width: auto;
+    height: 20px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.block_tag {
+    width: 480px;
+    margin-bottom: 15px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: #9a9a9a;
+}
+
+input[type=text] {
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    outline: none;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+input[type=password] {
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    outline: none;
+    outline-color: #dbdbdb;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+input[type=button] {
+  border: none;
+  background: none;
+  width: auto;
+  height: 24px;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+#member_email1 {
+    height: 40px;
+    width: 44%;
+    border: 2px solid #dbdbdb;
+    outline: none;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+#member_email2 {
+  width: 45%;
+  height: 46px;
+  border: solid 2px #e0e0e0;
+  background-color: #ffffff;
+  outline: none;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+}
+
+#etc {
+    margin: 0;
+    text-align: right;
+}
+
+#member_email3 {
+    margin: 0;
+    height: 40px;
+    width: 45%;
+    border: 2px solid #dbdbdb;
+    outline: none;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9a9a9a;
+}
+
+#update {
+  width: 100%;
+  height: 56px;
+  background-color: #43e39f;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}

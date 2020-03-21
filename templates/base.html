@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/basic.css' %}" rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        <!-- 메뉴 선택 시 선택된 탭 녹색으로 표시하기 -->
+        $(function(){
+            <!-- 주소값(locahost이후 부분) 가져와서 '/' 단위로 스플릿 -->
+            var path = '{{request.path}}'.split("/")[1];
+            if(path=="members"){
+                $("#members").removeClass('header_item').addClass('header_selected');
+                $("#mypage").removeClass('header_item').addClass('header_selected');
+            }else if(path=="arts"){
+                $("#arts").removeClass('header_item').addClass('header_selected');
+            }else if(path=="searching"){
+                $("#searching").removeClass('header_item').addClass('header_selected');
+            }else if(path=="product"){
+                $("#product").removeClass('header_item').addClass('header_selected');
+            }
+        })
+    </script>
+    {% block script %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<section class="header">
+    <!-- 로고 클릭시 메인 페이지로 넘어가도록 작성 -->
+    <div class="logo_location-div"><a href="/" class="logo">커넥툰</a></div>
+    <div class="item_location-div">
+        <!-- 세션이 있을 경우 로그아웃 버튼 활성화 -->
+        {% if request.session.member_id != None %}
+            <span class="item"><a href="/members/logout" class="header_item">로그아웃</a></span>
+        {% endif %}
+
+        <!-- 각 메뉴 이동까지만 구현 -->
+        <span class="item"><a href="/arts" id="arts" class="header_item">작품보기</a></span>
+        <span class="item"><a href="/searching" id="searching" class="header_item">작가찾기</a></span>
+        <span class="item"><a href="/product" id="product" class="header_item">탄생웹툰</a></span>
+
+        <!-- 세션이 있는 경우 로그인/회원가입 메뉴가 마이페이지로 변경 -->
+        {% if request.session.member_id != None %}
+            <span class="item"><a href="/members/mypage" id="mypage" class="header_item">마이페이지</a></span>
+        {% else %}
+            <span class="item"><a href="/members" id="members" class="header_item">로그인/회원가입</a></span>
+        {% endif %}
+    </div>
+    <span class="logo_location-a">
+
+    </span>
+    <span class="header_item_location">
+
+    </span>
+</section>
+<!-- 백그라운드 이미지는 zeplin에서 에엣추출이 안돼서 임의 사진 입력 -->
+<section class="ad" style="background-image:url('{% static "img/1.png" %}')">
+    <div class="ad_title">웹툰작가를 연결하다. 커넥툰</div>
+    <div class="ad_content">Connect + Webtoon</div>
+</section>
+
+<section class="content">
+{% block content %}
+{% endblock %}
+</section>
+<section class="footer">
+    <div class="logo_location-div"><span class="logo">커넥툰</span></div>
+    <div class="copyright_location-div">
+        <span class="copyright">사업자등록번호 155-88-01025 ｜ 대표 서장원,이민재 ｜ 서울시 마포구 케이스퀘어 708호 이메일 : wkddnjset@naver.com
+        Copyright © tirrilee 2019</span>
+    </div>
+</section>
+
+</body>
+</html>
